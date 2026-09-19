@@ -1,0 +1,147 @@
+/**
+ * Jani Pharma - Product Catalog Centralized Dataset
+ * Standardized pharmaceutical technical specifications and categorization.
+ */
+
+const JANY_PRODUCTS = [
+  {
+    id: "ip-etomidate-api",
+    name: "IP Etomidate API Powder",
+    category: "Active Pharmaceutical Ingredients",
+    categorySlug: "api",
+    image: "assets/ip-etomidate-api-powder-500x500.webp",
+    strength: "IP Grade",
+    casNumber: "33125-97-2",
+    purity: "≥ 99.0%",
+    dosageForm: "Crystalline API Powder",
+    packaging: "1 kg / 5 kg HDPE Container or 25 kg Fiber Drum",
+    storage: "Store in airtight containers at 15°C to 25°C. Protect from direct sun and moisture.",
+    shelfLife: "36 Months",
+    compliance: "IP Pharmacopoeial Standard / WHO-GMP Compliant Sourcing",
+    description: "High-grade Etomidate Active Pharmaceutical Ingredient manufactured strictly in accordance with Indian Pharmacopoeia standards. Primarily indicated as a short-acting hypnotic agent for general anesthesia and sedation.",
+    featured: true
+  },
+  {
+    id: "vidalista-2-5mg",
+    name: "2.5mg Vidalista Tadalafil Tablets",
+    category: "Finished Formulations",
+    categorySlug: "formulations",
+    image: "assets/2-5mg-tadalafil-tablets-1000x1000.webp",
+    strength: "2.5 mg",
+    casNumber: "171596-29-5 (Active)",
+    purity: "99.5% Assay Standard",
+    dosageForm: "Film-Coated Tablet",
+    packaging: "10 x 10 Blister Pack / Commercial Export Packaging",
+    storage: "Store below 30°C in a cool, dry place. Keep out of reach of children.",
+    shelfLife: "24 Months",
+    compliance: "Export Quality Grade / Comprehensive COA Available",
+    description: "Low-dose 2.5mg Tadalafil film-coated tablets formulated for daily therapeutic regimens requiring controlled bio-availability and consistent potency.",
+    featured: false
+  },
+  {
+    id: "kamagra-oral-jelly-100mg",
+    name: "100mg Kamagra Oral Jelly",
+    category: "Finished Formulations",
+    categorySlug: "formulations",
+    image: "assets/100mg-kamagra-sildenafil-oral-jelly-1000x1000.webp",
+    strength: "100 mg",
+    casNumber: "171599-83-0 (Active)",
+    purity: "Pharmaceutical Grade",
+    dosageForm: "Flavored Oral Gel Sachet",
+    packaging: "5g Sachet (Box of 7 / 50 Sachets)",
+    storage: "Store below 25°C. Do not freeze or expose to excessive heat.",
+    shelfLife: "24 Months",
+    compliance: "International Quality Export Standard",
+    description: "Rapid-absorption Sildenafil Citrate oral jelly formulation in convenient single-dose sachets, engineered for quick systemic uptake.",
+    featured: true
+  },
+  {
+    id: "mitomycin-api-powder",
+    name: "Mitomycin API Powder",
+    category: "Specialty APIs",
+    categorySlug: "specialty-api",
+    image: "assets/mitomycin-api-powder-1000x1000.webp",
+    strength: "High Potency Standard",
+    casNumber: "50-07-7",
+    purity: "≥ 98.0% (HPLC)",
+    dosageForm: "Sterile Lyophilized Powder",
+    packaging: "100 mg / 1 g / 10 g Sealed Amber Vials / Aluminum Pouches",
+    storage: "Refrigerated storage at 2°C to 8°C. Protect from heat, moisture, and light.",
+    shelfLife: "24 Months",
+    compliance: "Strict Regulatory Standard / Certified COA",
+    description: "Ultra-pure Mitomycin antibiotic API used in specialty oncology formulations, ophthalmology research, and critical therapeutic preparations.",
+    featured: true
+  },
+  {
+    id: "vidalista-5mg",
+    name: "5mg Vidalista Tadalafil Tablets",
+    category: "Finished Formulations",
+    categorySlug: "formulations",
+    image: "assets/5mg-tadalafil-tablets-1000x1000.webp",
+    strength: "5 mg",
+    casNumber: "171596-29-5 (Active)",
+    purity: "99.8% Assay Standard",
+    dosageForm: "Film-Coated Tablet",
+    packaging: "10 x 10 Blister Pack / Export Bulk Shipping Cartons",
+    storage: "Store below 30°C in a dry environment.",
+    shelfLife: "36 Months",
+    compliance: "WHO-GMP Compliant Manufacturing Process",
+    description: "Precision-dosed 5mg Tadalafil oral tablets engineered with optimal dissolution profiles for therapeutic efficacy.",
+    featured: false
+  },
+  {
+    id: "usp-etomidate-api",
+    name: "USP Etomidate API Powder",
+    category: "Active Pharmaceutical Ingredients",
+    categorySlug: "api",
+    image: "assets/usp-etomidate-api-powder-500x500.webp",
+    strength: "USP Grade",
+    casNumber: "33125-97-2",
+    purity: "≥ 99.5%",
+    dosageForm: "Fine Crystalline Powder",
+    packaging: "1 kg / 5 kg HDPE Container or 25 kg Standard PE-Lined Fiber Drum",
+    storage: "Store at 20°C to 25°C. Keep container tightly sealed.",
+    shelfLife: "36 Months",
+    compliance: "USP Monograph Standard / DMF Available Upon Request",
+    description: "Premium USP Grade Etomidate API intended for intravenous formulation, possessing strict impurity profiles and complete pharmacopeial compliance.",
+    featured: true
+  },
+  {
+    id: "vidalista-10mg",
+    name: "10mg Vidalista Tadalafil Tablets",
+    category: "Finished Formulations",
+    categorySlug: "formulations",
+    image: "assets/10mg-vidalista-tadalafil-tablets-1000x1000.webp",
+    strength: "10 mg",
+    casNumber: "171596-29-5 (Active)",
+    purity: "Pharmaceutical Grade",
+    dosageForm: "Film-Coated Tablet",
+    packaging: "10 x 10 Blister Pack / Custom Secondary Packaging",
+    storage: "Store below 30°C, protect from moisture and ambient heat.",
+    shelfLife: "36 Months",
+    compliance: "GMP Compliant Batch Production",
+    description: "Medium-strength 10mg Tadalafil tablets designed for predictable bioavailability and uniform active distribution.",
+    featured: false
+  },
+  {
+    id: "usp-etomidate-api-bulk",
+    name: "USP Etomidate API Powder (Bulk)",
+    category: "Active Pharmaceutical Ingredients",
+    categorySlug: "api",
+    image: "assets/ip-etomidate-api-powder-500x500 (1).webp",
+    strength: "Bulk Commercial USP Grade",
+    casNumber: "33125-97-2",
+    purity: "≥ 99.5%",
+    dosageForm: "Bulk Crystalline Powder",
+    packaging: "25 kg / 50 kg Commercial Export Drums",
+    storage: "Store in original closed container at 15°C to 25°C in dedicated climate-controlled storage.",
+    shelfLife: "36 Months",
+    compliance: "Global Commercial Export Standard / Technical Dossier Support",
+    description: "Commercial bulk packaging of USP Grade Etomidate API tailored for large-scale international pharmaceutical manufacturing and drug synthesis.",
+    featured: true
+  }
+];
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { JANY_PRODUCTS };
+}

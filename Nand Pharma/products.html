@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Products Catalog - Nand Pharma | Active Pharmaceutical Ingredients</title>
+  <meta name="description" content="Browse Nand Pharma's dataset of 15 Active Pharmaceutical Ingredients (APIs) including Paracetamol, Ibuprofen, Azithromycin, Amoxicillin, Omeprazole, Metformin HCl, and Atorvastatin Calcium with CAS numbers, HSN codes, and specifications." />
+  <meta name="keywords" content="Paracetamol API, Ibuprofen API, Azithromycin API, Amoxicillin Trihydrate API, Pantoprazole API, Omeprazole API, Metformin API, Atorvastatin API, Losartan API, Active Pharmaceutical Ingredients Catalog" />
+  <link rel="canonical" href="https://nandpharma.com/products.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="API Products Catalog - Nand Pharma" />
+  <meta property="og:description" content="Explore high-purity API active ingredients with complete CAS numbers, HSN codes, and pharmacopeial standards." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-info">
+        <span class="topbar-item">
+          <i class="ri-mail-line"></i>
+          <a href="mailto:inquiry@nandpharma.in">inquiry@nandpharma.in</a>
+        </span>
+        <span class="topbar-item">
+          <i class="ri-whatsapp-line"></i>
+          <a href="https://wa.me/919023973459" target="_blank" rel="noopener noreferrer">+91 90239 73459</a>
+        </span>
+      </div>
+      <div class="topbar-badge">
+        <i class="ri-shield-check-fill"></i> IP / BP / USP Pharmacopeia Standards
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo/Nand-Logo.png" alt="Nand Pharma - Active Pharmaceutical Ingredients" class="header-logo-img" />
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">Get Inquiry</a>
+          <button type="button" class="hamburger-btn" aria-label="Toggle Mobile Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay"></div>
+
+  <!-- Page Header -->
+  <section class="section-padding-sm" style="background: linear-gradient(135deg, var(--primary-navy) 0%, #0369A1 100%); color: #FFFFFF; text-align: center;">
+    <div class="container">
+      <span class="badge badge-mint" style="margin-bottom: 1rem;">RAW MATERIAL PORTFOLIO</span>
+      <h1 style="color: #FFFFFF; margin-bottom: 0.75rem;">Active Pharmaceutical Ingredients (APIs)</h1>
+      <p style="color: #E2E8F0; max-width: 620px; margin: 0 auto; font-size: 1.05rem;">
+        Search and filter our complete dataset of 15 high-purity API active ingredients. Click any product to view technical specifications or request commercial quotes via WhatsApp.
+      </p>
+    </div>
+  </section>
+
+  <!-- Products Main Catalog Section -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Search & Category Filters -->
+      <div class="products-filter-bar">
+        <div class="search-box-wrap">
+          <i class="ri-search-line search-icon-left"></i>
+          <input type="text" id="product-search-input" class="search-input" placeholder="Search by API name, CAS number, HSN code..." aria-label="Search API Products" />
+          <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear search">
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+
+        <div class="filter-tabs">
+          <button type="button" class="filter-tab active" data-category="all">All APIs (15)</button>
+          <button type="button" class="filter-tab" data-category="Analgesics & Antipyretics">Analgesics & Antipyretics</button>
+          <button type="button" class="filter-tab" data-category="Antibiotics & Anti-Infectives">Antibiotics & Anti-Infectives</button>
+          <button type="button" class="filter-tab" data-category="Gastrointestinal">Gastrointestinal (PPIs)</button>
+          <button type="button" class="filter-tab" data-category="Cardiovascular & Metabolic">Cardiovascular & Metabolic</button>
+          <button type="button" class="filter-tab" data-category="Respiratory & Anti-Allergic">Respiratory & Anti-Allergic</button>
+          <button type="button" class="filter-tab" data-category="Antifungal & Anti-Emetic">Antifungal & Anti-Emetic</button>
+        </div>
+      </div>
+
+      <!-- Product Grid Container -->
+      <div id="catalog-products-grid" class="products-grid">
+        <!-- Dynamically rendered via js/products.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial Note / Inquiry Strip -->
+  <section class="section-padding-sm" style="background-color: var(--bg-white); border-top: 1px solid var(--border-color);">
+    <div class="container" style="text-align: center;">
+      <h3 style="color: var(--primary-navy); margin-bottom: 0.75rem;">Can't find a specific API product?</h3>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 1.5rem auto; font-size: 0.95rem;">
+        Our commercial procurement desk regularly sources customized API specifications and specialized bulk quantities for partner formulation plants.
+      </p>
+      <a href="https://wa.me/919023973459?text=Hello%20Nand%20Pharma%2C%20I%20have%20a%20custom%20API%20requirement%20not%20listed%20on%20the%20website." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+        <i class="ri-whatsapp-line btn-icon"></i> Inquire Custom API Requirement
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html">
+            <img src="assets/images/logo/Nand-Logo.png" alt="Nand Pharma Logo" class="footer-logo-img" />
+          </a>
+          <span class="footer-brand-sub">Active Pharmaceutical Ingredients</span>
+          <p class="footer-desc">
+            Trusted supplier of high-purity Active Pharmaceutical Ingredients (APIs) for formulation companies, CDMOs, and healthcare distributors worldwide.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">All 15 API Products</a></li>
+            <li><a href="certifications.html">Quality & Certifications</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">API Categories</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Analgesics & Antipyretics</a></li>
+            <li><a href="products.html">Antibiotics & Anti-Infectives</a></li>
+            <li><a href="products.html">Gastrointestinal (PPIs)</a></li>
+            <li><a href="products.html">Cardiovascular & Metabolic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Inquiry Desk</h4>
+          <div class="footer-contact-item">
+            <i class="ri-mail-line footer-contact-icon"></i>
+            <div>
+              <div style="font-size: 0.78rem; color: #94A3B8;">Email Inquiry</div>
+              <a href="mailto:inquiry@nandpharma.in" style="color: #FFFFFF;">inquiry@nandpharma.in</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ri-whatsapp-line footer-contact-icon"></i>
+            <div>
+              <div style="font-size: 0.78rem; color: #94A3B8;">WhatsApp Support</div>
+              <a href="https://wa.me/919023973459" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;">+91 90239 73459</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span id="current-year"></span> <strong>Nand Pharma</strong>. All Rights Reserved. Active Pharmaceutical Ingredients Supplier.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919023973459?text=Hello%20Nand%20Pharma%2C%20I%20would%20like%20to%20inquire%20about%20API%20products." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" title="Contact Nand Pharma on WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+    <span class="whatsapp-pulse-ring"></span>
+  </a>
+
+  <!-- Product Modal Overlay -->
+  <div id="product-modal-overlay" class="modal-overlay">
+    <div class="modal-container">
+      <button type="button" class="modal-close-btn" onclick="closeProductModal()" aria-label="Close modal">
+        <i class="ri-close-line"></i>
+      </button>
+      <div id="product-modal-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initProductSearchAndFilter('catalog-products-grid');
+    });
+  </script>
+</body>
+</html>
