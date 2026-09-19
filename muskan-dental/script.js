@@ -300,8 +300,8 @@ function renderPackages() {
 <div class="pkg-card${p.popular ? ' popular' : ''}">
     ${p.popular ? '<span class="pkg-badge">Straumann Neodent</span>' : ''}
     <h3>${p.name}</h3><div class="pkg-sub">${p.sub}</div>
-    <div class="pkg-price">${p.price === 'Custom' ? '<span style="font-size:2rem">Custom</span>' : '£' + p.price}</div>
-    <div class="pkg-from">${p.from}</div>
+    <!-- <div class="pkg-price">${p.price === 'Custom' ? '<span style="font-size:2rem">Custom</span>' : '£' + p.price}</div>
+    <div class="pkg-from">${p.from}</div> -->
     <ul class="pkg-features">${p.features.map(f => `<li><i class="fa-solid fa-check"></i> ${f}</li>`).join('')}</ul>
     <button class="btn ${p.popular ? 'btn-primary' : 'btn-ghost'}" data-modal="book">Book Consultation</button>
 </div>`;
