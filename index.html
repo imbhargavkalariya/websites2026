@@ -14,6 +14,14 @@
     tailwind.config = {
       theme: {
         extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#4741E4',
+              light: '#6059F6',
+              dark: '#3530B8',
+              glow: 'rgba(71, 65, 228, 0.4)',
+            }
+          },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             display: ['Space Grotesk', 'sans-serif'],
@@ -45,20 +53,20 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #6366f1;
+      background: #4741E4;
       border-radius: 3px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: #818cf8;
+      background: #6059F6;
     }
 
     /* Animated gradient background */
     .hero-gradient {
       background:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.3), transparent),
-        radial-gradient(ellipse 60% 40% at 80% 50%, rgba(168, 85, 247, 0.15), transparent),
-        radial-gradient(ellipse 60% 40% at 20% 50%, rgba(59, 130, 246, 0.15), transparent);
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(71, 65, 228, 0.35), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 50%, rgba(96, 89, 246, 0.2), transparent),
+        radial-gradient(ellipse 60% 40% at 20% 50%, rgba(53, 48, 184, 0.15), transparent);
     }
 
     /* Grid background pattern */
@@ -86,7 +94,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent-color, #6366f1), transparent);
+      background: linear-gradient(90deg, transparent, var(--accent-color, #4741E4), transparent);
       opacity: 0;
       transition: opacity 0.5s ease;
     }
@@ -101,7 +109,7 @@
       transform: translateY(-8px);
       box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.4),
-        0 0 40px rgba(99, 102, 241, 0.1);
+        0 0 40px rgba(71, 65, 228, 0.25);
     }
 
     /* Preview container */
@@ -157,7 +165,7 @@
     /* Glow button */
     .glow-btn {
       position: relative;
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      background: linear-gradient(135deg, #4741E4, #6059F6);
       transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
       overflow: hidden;
     }
@@ -166,7 +174,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, #818cf8, #a78bfa);
+      background: linear-gradient(135deg, #6059F6, #817CF8);
       opacity: 0;
       transition: opacity 0.4s ease;
     }
@@ -177,20 +185,20 @@
 
     .glow-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+      box-shadow: 0 8px 25px rgba(71, 65, 228, 0.45);
     }
 
     /* Tag styles */
     .category-tag {
-      background: rgba(99, 102, 241, 0.12);
-      border: 1px solid rgba(99, 102, 241, 0.2);
-      color: #a5b4fc;
+      background: rgba(71, 65, 228, 0.14);
+      border: 1px solid rgba(71, 65, 228, 0.25);
+      color: #b0adff;
       transition: all 0.3s ease;
     }
 
     .project-card:hover .category-tag {
-      background: rgba(99, 102, 241, 0.2);
-      border-color: rgba(99, 102, 241, 0.35);
+      background: rgba(71, 65, 228, 0.25);
+      border-color: rgba(71, 65, 228, 0.45);
     }
 
     /* Floating orbs */
@@ -274,8 +282,8 @@
     /* Nav blur */
     .nav-blur {
       backdrop-filter: blur(20px) saturate(180%);
-      background: rgba(10, 10, 15, 0.7);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(10, 10, 15, 0.75);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     /* Marquee */
@@ -306,8 +314,8 @@
 
     .search-input:focus {
       background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(99, 102, 241, 0.4);
-      box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+      border-color: rgba(71, 65, 228, 0.5);
+      box-shadow: 0 0 20px rgba(71, 65, 228, 0.25);
       outline: none;
     }
 
@@ -320,9 +328,9 @@
 
     .filter-btn:hover,
     .filter-btn.active {
-      background: rgba(99, 102, 241, 0.15);
-      border-color: rgba(99, 102, 241, 0.3);
-      color: #a5b4fc;
+      background: rgba(71, 65, 228, 0.2);
+      border-color: rgba(71, 65, 228, 0.4);
+      color: #c0bdff;
     }
 
     /* Pulse dot */
@@ -351,7 +359,7 @@
 
     /* Text gradient */
     .text-gradient {
-      background: linear-gradient(135deg, #e0e7ff, #a5b4fc, #818cf8, #c084fc);
+      background: linear-gradient(135deg, #ffffff 0%, #d0ceff 40%, #817cf8 75%, #4741E4 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -371,14 +379,10 @@
   <!-- Navigation -->
   <nav class="nav-blur fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center gap-3 group">
-          <div
-            class="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:shadow-indigo-500/40 transition-shadow">
-            <i data-lucide="code-2" class="w-5 h-5 text-white"></i>
-          </div>
-          <span class="font-display font-bold text-lg text-white">Anguler<span class="text-indigo-400">
-              Tech</span></span>
+      <div class="flex items-center justify-between h-20">
+        <a href="https://anguler.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group">
+          <img src="Full Logo (9).png" alt="Anguler Innovations"
+            class="h-11 sm:h-13 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
         </a>
         <div class="hidden md:flex items-center gap-1">
           <a href="#projects"
@@ -409,16 +413,16 @@
   <!-- Hero Section -->
   <section class="hero-gradient grid-pattern relative min-h-[85vh] flex items-center justify-center pt-16">
     <!-- Floating orbs -->
-    <div class="orb w-[400px] h-[400px] bg-indigo-600/30 -top-20 -left-40" style="animation-delay: 0s;"></div>
-    <div class="orb w-[300px] h-[300px] bg-purple-600/20 top-40 right-10" style="animation-delay: 3s;"></div>
-    <div class="orb w-[250px] h-[250px] bg-blue-600/20 bottom-20 left-1/4" style="animation-delay: 5s;"></div>
+    <div class="orb w-[400px] h-[400px] bg-[#4741E4]/35 -top-20 -left-40" style="animation-delay: 0s;"></div>
+    <div class="orb w-[300px] h-[300px] bg-[#6059F6]/25 top-40 right-10" style="animation-delay: 3s;"></div>
+    <div class="orb w-[250px] h-[250px] bg-[#3530B8]/20 bottom-20 left-1/4" style="animation-delay: 5s;"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
       <!-- Badge -->
       <div
-        class="fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-8 mt-16">
+        class="fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4741E4]/15 border border-[#4741E4]/30 mb-8 mt-16">
         <span class="w-2 h-2 rounded-full bg-green-400 pulse-dot"></span>
-        <span class="text-sm text-indigo-300 font-medium">Portfolio Collection 2026</span>
+        <span class="text-sm text-[#c0bdff] font-medium">Portfolio Collection 2026</span>
       </div>
 
       <!-- Main heading -->
@@ -445,7 +449,7 @@
             Browse Projects
           </span>
         </a>
-        <a href="#about"
+        <a href="https://anguler.com/" target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-gray-300 font-semibold text-sm border border-white/10 hover:bg-white/5 hover:border-white/20 transition-all">
           <i data-lucide="info" class="w-4 h-4"></i>
           Learn More
@@ -541,9 +545,9 @@
       <!-- Section Header -->
       <div class="text-center mb-12">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-4">
-          <i data-lucide="folder-open" class="w-3.5 h-3.5 text-indigo-400"></i>
-          <span class="text-xs text-indigo-300 font-medium uppercase tracking-wider">Portfolio</span>
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#4741E4]/15 border border-[#4741E4]/30 mb-4">
+          <i data-lucide="folder-open" class="w-3.5 h-3.5 text-[#817CF8]"></i>
+          <span class="text-xs text-[#c0bdff] font-medium uppercase tracking-wider">Portfolio</span>
         </div>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Project Showcase</h2>
         <p class="text-gray-400 max-w-xl mx-auto">Explore our collection of beautifully crafted websites. Click on any
@@ -634,22 +638,19 @@
   <footer class="border-t border-white/5 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-3">
-          <div
-            class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-            <i data-lucide="code-2" class="w-4 h-4 text-white"></i>
-          </div>
-          <span class="font-display font-bold text-white">Anguler<span class="text-indigo-400"> Tech</span></span>
-        </div>
-        <p class="text-sm text-gray-500">© 2024–2026 Anguler Tech Projects. Crafted with ❤️</p>
+        <a href="https://anguler.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group">
+          <img src="Full Logo (9).png" alt="Anguler Innovations"
+            class="h-10 sm:h-12 md:h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+        </a>
+        <p class="text-sm text-gray-500">© 2024–2026 Anguler Innovations Projects. Crafted with ❤️</p>
         <div class="flex items-center gap-4">
-          <a href="#" class="text-gray-500 hover:text-indigo-400 transition-colors"><i data-lucide="github"
+          <a href="#" class="text-gray-500 hover:text-[#6059F6] transition-colors"><i data-lucide="github"
               class="w-5 h-5"></i></a>
-          <a href="#" class="text-gray-500 hover:text-indigo-400 transition-colors"><i data-lucide="twitter"
+          <a href="#" class="text-gray-500 hover:text-[#6059F6] transition-colors"><i data-lucide="twitter"
               class="w-5 h-5"></i></a>
-          <a href="#" class="text-gray-500 hover:text-indigo-400 transition-colors"><i data-lucide="linkedin"
+          <a href="#" class="text-gray-500 hover:text-[#6059F6] transition-colors"><i data-lucide="linkedin"
               class="w-5 h-5"></i></a>
-          <a href="#" class="text-gray-500 hover:text-indigo-400 transition-colors"><i data-lucide="mail"
+          <a href="#" class="text-gray-500 hover:text-[#6059F6] transition-colors"><i data-lucide="mail"
               class="w-5 h-5"></i></a>
         </div>
       </div>
@@ -658,13 +659,22 @@
 
   <!-- Back to top -->
   <button id="backToTop"
-    class="fixed bottom-6 right-6 w-12 h-12 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white flex items-center justify-center shadow-lg shadow-indigo-500/25 transition-all opacity-0 translate-y-4 pointer-events-none z-50">
+    class="fixed bottom-6 right-6 w-12 h-12 rounded-xl bg-[#4741E4] hover:bg-[#3530B8] text-white flex items-center justify-center shadow-lg shadow-[#4741E4]/30 transition-all opacity-0 translate-y-4 pointer-events-none z-50">
     <i data-lucide="arrow-up" class="w-5 h-5"></i>
   </button>
 
   <script>
     // Project data
     const projects = [
+      {
+        name: "Muskan Dental",
+        slug: "drbhattisimplantdubai.com",
+        category: "healthcare",
+        icon: "stethoscope",
+        color: "#2563eb",
+        description: "Premium dental implant clinic website featuring advanced implant treatments, full-mouth rehabilitation, cosmetic dentistry, smile makeover services, expert specialist profiles, before & after gallery, online appointment booking, patient testimonials, international patient support, and direct WhatsApp consultation for patients across Dubai and the UAE.",
+        tags: ["Dental Clinic", "Dental Implants", "Healthcare"]
+      },
       {
         name: "ADV Manoj Sharma",
         slug: "adv-manoj.anguler.com",
@@ -691,6 +701,15 @@
         color: "#ec4899",
         description: "Personal portfolio showcasing professional achievements and services.",
         tags: ["Personal", "Portfolio"]
+      },
+      {
+        name: "Nand Pharma",
+        slug: "nandpharma.in",
+        category: "business",
+        icon: "pill",
+        color: "#2563eb",
+        description: "Professional pharmaceutical company website showcasing API products, pharmaceutical ingredients, certifications, product specifications, and inquiry-based solutions for domestic and international pharmaceutical businesses.",
+        tags: ["Pharmaceutical", "API", "Healthcare"]
       },
       {
         name: "PNG Infotech",
@@ -738,15 +757,6 @@
         tags: ["Personal", "Portfolio"]
       },
       {
-        name: "Bhargav Kalariya",
-        slug: "bhargav-kalariya.anguler.com",
-        category: "professional",
-        icon: "graduation-cap",
-        color: "#06b6d4",
-        description: "Personal brand website highlighting expertise and accomplishments.",
-        tags: ["Personal", "Brand"]
-      },
-      {
         "name": "Swiftrut",
         "slug": "swiftrut.anguler.com",
         "category": "technology",
@@ -785,21 +795,14 @@
       {
         name: "Patel Milin",
         slug: "patelmilin.com",
+        localPath: "patel-milin/index.html",
         category: "professional",
         icon: "user",
         color: "#6366f1",
         description: "Personal portfolio website showcasing professional profile, skills, and achievements.",
         tags: ["Personal", "Portfolio"]
       },
-      {
-        name: "Veda Chemicals",
-        slug: "vedachemicals.com",
-        category: "business",
-        icon: "flask-conical",
-        color: "#14b8a6",
-        description: "Chemical manufacturing company website presenting products, industry solutions, and corporate information.",
-        tags: ["Chemical", "Industry"]
-      },
+
       {
         name: "Velvet Life",
         slug: "velvet-life.anguler.com",
@@ -808,15 +811,6 @@
         color: "#ec4899",
         description: "Luxury lifestyle and jewelry brand website with elegant design and premium product showcase.",
         tags: ["Luxury", "Lifestyle"]
-      },
-      {
-        name: "SwiftRut",
-        slug: "swiftrut.anguler.com",
-        category: "development",
-        icon: "layout",
-        color: "#0ea5e9",
-        description: "Full-stack MERN development platform focused on building modern web applications with clean UI/UX design, scalable architecture, and high-performance user experiences.",
-        tags: ["MERN Stack", "UI/UX Design", "Web Apps"]
       },
       {
         name: "Shivinta Pharma",
@@ -873,13 +867,31 @@
         tags: ["IT Company", "Software Development", "Technology"]
       },
       {
-        name: "Muskan Dental",
-        slug: "drbhattisimplantdubai.com",
-        category: "healthcare",
-        icon: "stethoscope",
-        color: "#2563eb",
-        description: "Premium dental implant clinic website featuring advanced implant treatments, full-mouth rehabilitation, cosmetic dentistry, smile makeover services, expert specialist profiles, before & after gallery, online appointment booking, patient testimonials, international patient support, and direct WhatsApp consultation for patients across Dubai and the UAE.",
-        tags: ["Dental Clinic", "Dental Implants", "Healthcare"]
+        name: "Jani Pharma",
+        slug: "janipharma.anguler.com",
+        category: "business",
+        icon: "flask-conical",
+        color: "#0f766e",
+        description: "International pharmaceutical trading, sourcing, and export company specializing in high-purity APIs, finished formulations, regulatory documentation, and global pharmaceutical supply solutions.",
+        tags: ["Pharmaceutical", "API", "Global Export"]
+      },
+      {
+        name: "Veda Chemicals",
+        slug: "vedachemicals.com",
+        category: "business",
+        icon: "flask-conical",
+        color: "#14b8a6",
+        description: "Chemical manufacturing company website presenting products, industry solutions, and corporate information.",
+        tags: ["Chemical", "Industry"]
+      },
+      {
+        name: "Neptune Times",
+        slug: "neptunetimes.com",
+        category: "business",
+        icon: "watch",
+        color: "#071a33",
+        description: "Premium luxury watch website showcasing an exclusive collection of high-end timepieces from leading international watch brands with elegant product presentation and direct customer inquiries.",
+        tags: ["Luxury Watches", "E-commerce", "Lifestyle"]
       }
     ];
 
@@ -909,7 +921,7 @@
             </div>
             <div style="height: 180px; overflow: hidden;">
               <iframe 
-                src="${baseUrl}${project.slug}" 
+                src="${project.localPath ? './' + project.localPath : baseUrl + project.slug}" 
                 class="preview-iframe" 
                 loading="lazy"
                 sandbox="allow-scripts allow-same-origin"
