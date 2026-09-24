@@ -77,6 +77,9 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -85,8 +88,12 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
   position: relative;
   -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Subtle background molecular pattern */
@@ -198,10 +205,12 @@ h6 {
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 h1 {
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
 }
 
 h2 {
@@ -437,7 +446,9 @@ h4 {
   position: fixed;
   top: 1.25rem;
   left: 0;
+  right: 0;
   width: 100%;
+  max-width: 100%;
   z-index: 1000;
   transition: var(--transition-smooth);
 }
@@ -565,7 +576,8 @@ h4 {
 .mobile-drawer {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
+  transform: translateX(100%);
   width: 88%;
   max-width: 380px;
   height: 100vh;
@@ -577,11 +589,13 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
+  visibility: hidden;
 }
 
 .mobile-drawer.active {
-  right: 0;
+  transform: translateX(0);
+  visibility: visible;
 }
 
 .mobile-drawer-header {
@@ -734,9 +748,10 @@ h4 {
 .hero-trust-bar {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-light);
+  flex-wrap: wrap;
 }
 
 .trust-item {
@@ -850,11 +865,33 @@ h4 {
 
   .hero-trust-bar {
     justify-content: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
   }
 
   .hero-glass-floating,
   .hero-badge-floating {
     display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .whatsapp-float {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 16px;
+    padding: 8px;
   }
 }
 
